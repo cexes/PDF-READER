@@ -1,0 +1,37 @@
+Resources:
+
+ The user can open the PDF, Create anotaion above the text, mark text, and they can create
+a note and this not is save, when click that not open a page
+
+##################################################################################################
+
+ Tecnology:
+
+ - Front End: ReactJs
+
+ - Back End: NodeJs
+ 
+ - DataBase: PostGresql
+ 
+ - Maybe a Java for App, consuming the nodejs API, or ReactNative.
+ 
+ - Later, i will implement the Redis for Cache
+
+
+###################################################################################################
+
+
+
+Skills:
+
+ - Learn how extract the pdf and render that on FrontEnd
+
+ - May use some libary
+
+
+###################################################################################################
+
+
+
+
+
