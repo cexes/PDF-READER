@@ -7,7 +7,8 @@ routes.get('/',(req,res) => { console.log('home')});
 
 //post
 
-routes.post('/createLogin', LoginController.InsertUser)
+routes.post('/login', LoginController.LoginUser)
+
 
 
 module.exports = routes
