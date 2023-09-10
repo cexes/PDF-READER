@@ -1,6 +1,5 @@
 const userQuery = require('../database/Models/UsersManagerDbTable');
-
-
+const Session = require('../middleware/Session')
 function CreateUser( req,res ) {
   const {name,email,password} = req.body;
   userQuery.InsertUser(name,email,password)
@@ -12,7 +11,7 @@ function CreateUser( req,res ) {
 };
 
 
-async function LoginUser(req, res) {
+async function LoginUser (req, res) {
   const { email, password } = req.body;
   try {
 
@@ -23,8 +22,8 @@ async function LoginUser(req, res) {
         return res.json({ 'ERR': 'USUÁRIO NÃO EXISTE' }
     )}
     
-    return res.json({ 'email': email });
- 
+     req.session.email = 'teste'
+     console.log(req.session.email)
   } catch (error) {
     console.error('Erro:', error);
     return res.status(500).json({ 'ERR': 'Erro interno do servidor' });
