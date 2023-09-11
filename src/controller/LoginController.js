@@ -1,5 +1,4 @@
 const userQuery = require('../database/Models/UsersManagerDbTable');
-const Session = require('../middleware/Session')
 function CreateUser( req,res ) {
   const {name,email,password} = req.body;
   userQuery.InsertUser(name,email,password)
