@@ -18,4 +18,4 @@ async function InserNote ( user_id, file_path, annotations, page ) {
 }
 
 SelecAll();
-//InserNote (1,'../teste ','EESSA PAGINA ME TAL', 1 );
+module.exports = {InsertPdf, InserNote }; 
