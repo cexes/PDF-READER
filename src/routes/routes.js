@@ -3,6 +3,7 @@ const routes = express.Router();
 const Session = require('../middleware/Session')
 const LoginController = require('../controller/LoginController');
 const DocumentsController = require('../controller/DocumentsController');
+const Multer = require('../middleware/Multer');
 
 //Get Routes
 
@@ -13,6 +14,7 @@ routes.get('/return_pdf', DocumentsController.PdfByUser)
 
 //Post Routes
 
+routes.post('/pdfSend', Multer.single('file'))
 routes.post('/create_user', LoginController.CreateUser);
 routes.post('/login', Session,  LoginController.LoginUser);
 routes.post('/insertNewPdf', DocumentsController.InsertNewPdf);
