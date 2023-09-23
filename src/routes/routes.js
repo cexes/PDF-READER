@@ -9,7 +9,7 @@ const DocumentsController = require('../controller/DocumentsController');
 routes.get('/',(req,res) => { console.log('home')});
 routes.get('/teste', (req,res) => { console.log(req.session.ident)});
 routes.get('/logout',(req,res) => { req.session.destroy() });
-
+routes.get('/return_pdf', DocumentsController.PdfByUser)
 
 //Post Routes
 
