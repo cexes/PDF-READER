@@ -18,6 +18,6 @@ routes.post('/pdfSend', Multer.single('file'), DocumentsController.NewPdf)
 routes.post('/create_user', LoginController.CreateUser);
 routes.post('/login', Session,  LoginController.LoginUser);
 routes.post('/insertNewPdf', DocumentsController.InsertNewPdf);
-
+routes.post('/new-note',DocumentsController.newNote);
 
 module.exports = routes
