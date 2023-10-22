@@ -10,6 +10,7 @@ async function InsertUser(name,email,pass ){
 
      const UserSelect = 'SELECT * FROM users WHERE email = $1'; 
      const querySelectUser = await pool.query(UserSelect,[email]);
+      
 
      if(querySelectUser.rows.length > 0 ) { 
         console.log('User ared cadastred');
@@ -21,7 +22,8 @@ async function InsertUser(name,email,pass ){
 
 async function SelectOneUser(email, password) {
    const selectOne = await pool.query(' SELECT * FROM users WHERE email = $1 AND password = $2', [email, password]); 
-       return selectOne.rows
+   const returnIDandName = await pool.query( 'SELECT id FROM users WHERE  email = $1',[ email]);
+   return returnIDandName.rows;
 }
 
 module.exports = { InsertUser, SelectOneUser }; 
