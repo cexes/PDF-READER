@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
 
 module.exports = pool = new Pool ({
-    database: 'PDF_READER_NEW_HOMOLOG',
+    database: 'pdf_reader_new_homolog',
     user: 'adm',
     password: 'root'
 })
